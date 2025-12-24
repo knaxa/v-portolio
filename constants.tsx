@@ -5,9 +5,9 @@ export const PROJECTS: Project[] = [
   {
     id: '1',
     title: 'Diabetes Prediction Application',
-    description: 'The Diabetes Prediction Application is a machine learning-based solution that predicts the likelihood of diabetes in individuals based on specific health metrics',
-    longDescription: 'Developed a predictive model using SVM, FastAPI, and PostgreSQL for diabetes risk assessment.Integrated features for automated model retraining, data validation, and data deletion to ensure accuracy',
-    tags: ['SVM', 'FastAPI', 'PostgreSQL'],
+    description: 'Machine learning web application that predicts diabetes risk using health metrics with an automated retrainable backend.',
+    longDescription: 'Built an end-to-end diabetes prediction system using Support Vector Machine (SVM). Features include FastAPI backend, PostgreSQL database, automated model retraining pipeline, input data validation, and secure data deletion to ensure accuracy',
+    tags: ['SVM', 'FastAPI', 'PostgreSQL', 'Python', 'Scikit-learn'],
     imageUrl: 'https://github.com/KyushMaske/Diabetes/blob/main/templates/Sample.png?raw=true',
     videoUrl: 'https://www.youtube.com/watch?v=UmeuebK39U8',
     category: 'AI/ML',
@@ -16,26 +16,15 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '2',
-    title: 'Text to Video',
-    description: 'Backend service for financial fraud detection with sub-10ms latency.',
-    longDescription: 'Developed a system that extracts keywords from sentences, fetches relevant images, generates audio, and combines these elements into cohesive video clips, ultimately producing a full-length video.',
-    tags: ['keybert', 'ffmeg', 'movidepy', 'sentence'],
+    title: 'Text-to-Video',
+    description: 'Automated pipeline that converts text input into complete videos by extracting keywords, fetching visuals, generating narration.',
+    longDescription: 'Developed a backend system that: 1) extracts key concepts from input text, 2) searches and retrieves relevant images, 3) generates voice-over audio, and 4) combines everything into polished videos using FFmpeg and MoviePy. Achieves fully automated content creation from plain sentences.',
+    tags: ['KeyBERT', 'FFmpeg', 'MoviePy', 'Sentence Transformers', 'Python'],
     imageUrl: 'https://github.com/knaxa/images/blob/main/Screenshot%202025-12-24%20142646.png?raw=true',
     category: 'Backend',
     videoUrl:'https://www.youtube.com/watch?v=I86wk21nLi8',
     githubUrl: '',
     liveUrl: ''
-  },
-  {
-    id: '3',
-    title: 'Detection of Fundus Glaucoma',
-    description: 'Developed classifiers using ResNet50 and Xception on the Standardized Fundus Glaucoma Dataset(SMDG)',
-    longDescription: 'Implemented GradCAM (Gradient-weighted Class Activation Mapping) to visualize and highlight critical image regions for classification ',
-    tags: ['ResNet50', 'Xception', 'TensorFlow', 'GradCAM', 'ROS2'],
-    imageUrl: 'https://github.com/knaxa/images/blob/main/Screenshot%202025-12-24%20143025.png?raw=true',
-    videoUrl: 'https://www.youtube.com/watch?v=YQOqSrCvNvY',
-    category: 'AI/ML',
-    githubUrl: ''
   }
 ];
 
