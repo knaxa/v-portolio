@@ -120,7 +120,7 @@ const App: React.FC = () => {
                   <div className="dot bg-red-500/50"></div>
                   <div className="dot bg-yellow-500/50"></div>
                   <div className="dot bg-green-500/50"></div>
-                  <span className="text-[10px] mono text-gray-500 ml-2">sys_info.sh — 80×24</span>
+                  <span className="text-[10px] mono text-gray-500 ml-2">sys_info.sh</span>
                 </div>
                 <div className="p-6 mono text-sm space-y-4">
                   <div className="text-blue-400">$ whoami</div>
@@ -147,55 +147,78 @@ const App: React.FC = () => {
 
       {/* Experience Section */}
       <section id="experience" className="py-24 px-6 border-y border-white/[0.03]">
-        <div className="container mx-auto max-w-6xl">
-          <div className="flex items-center gap-4 mb-16">
-            <h2 className="text-3xl font-black text-white mono tracking-tighter uppercase">/ Experience</h2>
-            <div className="h-px flex-1 bg-white/5"></div>
-          </div>
+  <div className="container mx-auto max-w-6xl">
+    <div className="flex items-center gap-4 mb-16">
+      <h2 className="text-3xl font-black text-white mono tracking-tighter uppercase">/ Experience</h2>
+      <div className="h-px flex-1 bg-white/5"></div>
+    </div>
 
-          <div className="grid lg:grid-cols-12 gap-12">
-            <div className="lg:col-span-4">
-              <div className="sticky top-32 space-y-4">
-                <div className="p-6 glass rounded-2xl border-blue-500/20">
-                  <Coffee className="text-blue-500 mb-4" size={32} />
-                  <h3 className="text-xl font-bold text-white mb-2">Technical Path</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    Summarizing experiences and skills across AI and backend ecosystems.
-                  </p>
-                </div>
-              </div>
+    <div className="grid lg:grid-cols-12 gap-12">
+      <div className="lg:col-span-4">
+        <div className="sticky top-32 space-y-4">
+          <div className="p-6 glass rounded-2xl border-blue-500/20">
+            <Coffee className="text-blue-500 mb-4" size={32} />
+            <h3 className="text-xl font-bold text-white mb-2">Technical Path</h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Summarizing experiences and skills across AI and backend ecosystems.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div className="lg:col-span-8 space-y-8">
+        {EXPERIENCE.map((exp) => (
+          <div
+            key={exp.id}
+            className="group relative glass p-8 rounded-3xl border-transparent hover:border-blue-500/30 hover:bg-white/[0.02] transition-all"
+          >
+            <h3 className="text-2xl font-black text-white">{exp.role}</h3>
+            <div className="flex flex-wrap items-center gap-3 mt-1 mb-6">
+              {exp.url ? (
+                <a
+                  href={exp.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 font-bold mono text-xs uppercase hover:underline hover:text-blue-300 transition-colors"
+                >
+                  {exp.company}
+                </a>
+              ) : (
+                <span className="text-blue-400 font-bold mono text-xs uppercase">{exp.company}</span>
+              )}
+              <span className="text-gray-600">•</span>
+              <span className="text-gray-500 text-xs mono">{exp.duration}</span>
+              {exp.location && (
+                <>
+                  <span className="text-gray-600">•</span>
+                  <span className="text-gray-500 text-xs mono">{exp.location}</span>
+                </>
+              )}
             </div>
-            
-            <div className="lg:col-span-8 space-y-8">
-              {EXPERIENCE.map((exp) => (
-                <div key={exp.id} className="group relative glass p-8 rounded-3xl border-transparent hover:border-blue-500/30 hover:bg-white/[0.02] transition-all">
-                  <h3 className="text-2xl font-black text-white">{exp.role}</h3>
-                  <div className="flex flex-wrap items-center gap-3 mt-1 mb-6">
-                    <span className="text-blue-400 font-bold mono text-xs uppercase">{exp.company}</span>
-                    <span className="text-gray-600">•</span>
-                    <span className="text-gray-500 text-xs mono">{exp.duration}</span>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    {exp.description.map((item, i) => (
-                      <li key={i} className="text-gray-400 text-sm flex items-start gap-3">
-                        <span className="mt-1.5 w-1 h-1 bg-blue-500 shrink-0"></span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-2">
-                    {exp.skills.map(skill => (
-                      <span key={skill} className="text-[10px] mono font-bold px-2 py-1 rounded bg-white/5 text-gray-500 group-hover:text-blue-300 transition-colors">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+            <ul className="space-y-3 mb-8">
+              {exp.description.map((item, i) => (
+                <li key={i} className="text-gray-400 text-sm flex items-start gap-3">
+                  <span className="mt-1.5 w-1 h-1 bg-blue-500 shrink-0 rounded-full"></span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-wrap gap-2">
+              {exp.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="text-[10px] mono font-bold px-2 py-1 rounded bg-white/5 text-gray-500 group-hover:text-blue-300 transition-colors"
+                >
+                  {skill}
+                </span>
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Project Section */}
       <section id="projects" className="py-24 px-6">
@@ -350,9 +373,11 @@ const App: React.FC = () => {
                 <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center">
                   <Terminal size={20} className="text-black" />
                 </div>
-                
+                <span className="mono font-bold text-xl text-white">exit</span>
               </div>
-              
+               <p className="text-gray-500 text-sm max-w-md">
+                Focusing on solving complex problems with simple solutions.
+              </p>
               
             </div>
             <div className="flex gap-12 text-sm mono">

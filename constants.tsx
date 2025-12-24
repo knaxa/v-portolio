@@ -91,7 +91,7 @@ export const EXPERIENCE: Experience[] = [
     company: 'Eydean INC',
     location: 'Kathmandu, Nepal',
     duration: 'August 2022 - NOV 2022',
-    url: 'https://example.com/datastream',
+    url: '',
     description: [
       'Conducted comprehensive EDA to uncover patterns, outliers, and insights, optimizing data for further analysis and model training.',
       'Contributed to Adeyelta’s AutoML pipeline, automating data preprocessing, visualization, and predictiv modeling, improving efficiency and accuracy in forecasting and analysis.',
@@ -105,7 +105,7 @@ export const EDUCATION: Education[] = [
     id: 'ed1',
     degree: 'Master Degree in AI- Distance learning ',
     institution: 'University of Lubeck',
-    year: '2024',
+    year: '2024-Present',
     url: 'https://www.uni-luebeck.de/en/university/university.html',
     details: ''
   },
@@ -113,7 +113,7 @@ export const EDUCATION: Education[] = [
     id: 'ed2',
     degree: 'Bachelor’s Degree in Computer Engineering',
     institution: 'Kathford International College of Engineering and Management',
-    year: '2018',
+    year: '2018-2023',
     url: 'https://kathford.edu.np/',
     details: ''
   }
@@ -122,19 +122,19 @@ export const EDUCATION: Education[] = [
 export const ARTICLES: Article[] = [
   {
     id: 'a1',
-    title: 'Scaling ML Models in Production: The Hidden Challenges',
-    excerpt: 'Deployment is just the beginning. Learn about observability, data drift, and model decay in enterprise environments.',
-    publishDate: 'Oct 12, 2024',
-    url: 'https://medium.com',
-    readingTime: '8 min read'
+    title: 'Hyperparameter Tuning with Optuna: A Smarter Approach : Part 2',
+    excerpt: 'Optuna is a Python library that automates hyperparameter tuning for machine learning models.It efficiently explores the hyperparameter space by learning from past trials and focusing on areas likely to yield better performance',
+    publishDate: 'Oct 9, 2024',
+    url: 'https://medium.com/@mkyush/hyperparameter-tuning-with-optuna-a-smarter-approach-part-2-652024f67430',
+    readingTime: '2 min read'
   },
   {
     id: 'a2',
-    title: 'Why I Switched from Python to Go for ML Infrastructure',
-    excerpt: 'The case for type safety and concurrency when building the plumbing for your AI models.',
-    publishDate: 'Sep 25, 2024',
-    url: 'https://medium.com',
-    readingTime: '6 min read'
+    title: 'Geocoding: The Magic Behind Pinpointing Addresses on Maps',
+    excerpt: 'Geocoding is the art of turning a street address into a latitude-longitude pair that a map can understand, Geocoding bridges this gap, converting addresses into coordinates that slot perfectly into systems like GPS',
+    publishDate: 'Jul 3, 2025',
+    url: 'https://medium.com/@mkyush/geocoding-the-magic-behind-pinpointing-addresses-on-maps-ad2b0f139f47',
+    readingTime: '4 min read'
   }
 ];
 
