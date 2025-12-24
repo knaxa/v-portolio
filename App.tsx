@@ -386,6 +386,7 @@ const App: React.FC = () => {
                 <div className="flex flex-col gap-2">
                   <a href="https://github.com/KyushMaske" className="text-gray-400 hover:text-white transition-colors">GitHub</a>
                   <a href="https://www.linkedin.com/in/kyush-maskey/" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+                  <a href="https://medium.com/@mkyush" className="text-gray-400 hover:text-white transition-colors">Medium</a>
                 </div>
               </div>
             </div>
